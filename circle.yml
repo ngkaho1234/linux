@@ -5,7 +5,7 @@ general:
 machine:
   # Add some environment variables
   environment:
-    CROSS_COMPILE: $(case $CIRCLE_NODE_INDEX in 0) host='' ;; 1) host='i686-w64-mingw32-' ;; 2) host='arm-linux-androideabi-' ;; esac; echo $host)
+    CROSS_COMPILE: $(case $CIRCLE_NODE_INDEX in 0) host='' ;; 1) host='i686-w64-mingw32-' ;; 2) host='arm-linux-androideabi-' ;; 3) host='arm-linux-gnueabi-' ;; esac; echo $host)
     PATH: /home/ubuntu/android-toolchain/bin:${PATH}
 
 ## Customize dependencies
